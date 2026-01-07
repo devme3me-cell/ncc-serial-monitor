@@ -337,11 +337,12 @@ export function SerialsPage() {
                           新增於 {new Date(serial.createdAt).toLocaleDateString("zh-TW")}
                         </p>
                       </div>
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 flex-shrink-0">
                         {/* Manual Rescan Button */}
                         <Button
                           variant="ghost"
                           size="icon"
+                          className="h-8 w-8"
                           onClick={() => handleRescan(serial)}
                           disabled={isScanning || !serial.isActive}
                           title="重新掃描"
@@ -350,7 +351,7 @@ export function SerialsPage() {
                         </Button>
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon">
+                            <Button variant="ghost" size="icon" className="h-8 w-8">
                               <MoreVertical className="w-4 h-4" />
                             </Button>
                           </DropdownMenuTrigger>

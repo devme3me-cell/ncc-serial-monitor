@@ -484,10 +484,11 @@ function DetectionCard({ detection, onUpdateStatus, getStatusBadge, showSerialIn
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 flex-shrink-0">
           <Button
             variant="ghost"
             size="icon"
+            className="h-8 w-8"
             onClick={() => window.open(detection.sourceUrl, "_blank")}
             title="開啟連結"
           >
@@ -495,7 +496,7 @@ function DetectionCard({ detection, onUpdateStatus, getStatusBadge, showSerialIn
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="h-8 w-8">
                 <MoreVertical className="w-4 h-4" />
               </Button>
             </DropdownMenuTrigger>
